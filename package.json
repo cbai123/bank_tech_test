@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cbai123/bank_tech_test#readme",
   "dependencies": {
-    "jest": "^29.3.1"
+    "jest": "^29.3.1",
+    "prompt-sync": "^4.2.0"
   }
 }
