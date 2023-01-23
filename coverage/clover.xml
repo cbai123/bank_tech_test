@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674499664492" clover="3.2.0">
-  <project timestamp="1674499664492" name="All files">
-    <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9" elements="28" coveredelements="28" complexity="0" loc="19" ncloc="19" packages="1" files="3" classes="3"/>
+<coverage generated="1674502114391" clover="3.2.0">
+  <project timestamp="1674502114391" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="9" elements="34" coveredelements="34" complexity="0" loc="21" ncloc="21" packages="1" files="3" classes="3"/>
     <file name="bank.js" path="/Users/chris/Documents/Makers/week9/bank_tech_test/bank.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
@@ -21,14 +21,16 @@
       <line num="10" count="2" type="stmt"/>
     </file>
     <file name="bank_transactions.js" path="/Users/chris/Documents/Makers/week9/bank_tech_test/bank_transactions.js">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <line num="3" count="6" type="stmt"/>
       <line num="4" count="6" type="stmt"/>
       <line num="8" count="13" type="stmt"/>
       <line num="9" count="13" type="stmt"/>
-      <line num="10" count="13" type="stmt"/>
-      <line num="14" count="6" type="stmt"/>
-      <line num="18" count="2" type="stmt"/>
+      <line num="11" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="13" type="stmt"/>
+      <line num="18" count="6" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
