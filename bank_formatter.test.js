@@ -9,7 +9,8 @@ describe('BankFormatter class', () => {
 
   afterEach(() => {
     logSpy.mockRestore();
-  })
+  });
+  
   it('accepts an array of one bank object and formats it correctly', () => {
     const bankFormatter = new BankFormatter;
     bankFormatter.format([{date: '14/01/2023', deposit: 100, withdrawal: "", balance: 150}])

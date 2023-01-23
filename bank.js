@@ -9,15 +9,15 @@ class Bank {
   }
 
   deposit(value) {
-    this.bankTransactions.addTransaction(value, 0);
+    this.bankTransactions.addTransaction(value, "");
   }
 
   withdraw(value) {
-    this.bankTransactions.addTransaction(0, value);
+    this.bankTransactions.addTransaction("", value);
   }
 
   viewStatement() {
-    this.bankFormatter(this.bankTransactions.getTransactions())
+    this.bankFormatter.format(this.bankTransactions.getTransactions())
   }
 }
 
