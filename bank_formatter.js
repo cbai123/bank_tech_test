@@ -1,10 +1,10 @@
 class BankFormatter {
-  format(array) {
-    console.log('date || credit || debit || balance');
+  format (array) {
+    console.log('date || credit || debit || balance')
     array.forEach(object => {
-    console.log(`${object.date} || ${object.deposit} || ${object.withdrawal} || ${object.balance}`);
+      console.log(`${object.date} || ${object.deposit} || ${object.withdrawal} || ${object.balance}`)
     })
   }
 }
 
-module.exports = BankFormatter;
+module.exports = BankFormatter
