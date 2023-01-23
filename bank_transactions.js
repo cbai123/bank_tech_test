@@ -6,7 +6,7 @@ class BankTransactions {
     this.bank = new Bank;
   }
 
-  addInteraction(deposit, withdrawal) {
+  addTransaction(deposit, withdrawal) {
     if (deposit != 0) {
       this.transactions.unshift(this.bank.deposit(deposit));
     } else if (withdrawal != 0) {
