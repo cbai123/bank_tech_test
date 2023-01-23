@@ -8,11 +8,11 @@ class Bank {
   }
 
   deposit (value) {
-    this.bankTransactions.addTransaction(value, '')
+    this.bankTransactions.addTransaction(value.toFixed(2), '')
   }
 
   withdraw (value) {
-    this.bankTransactions.addTransaction('', value)
+    this.bankTransactions.addTransaction('', value.toFixed(2))
   }
 
   viewStatement () {
