@@ -1,19 +1,13 @@
-const Bank = require("./bank");
-
 class BankTransactions {
   constructor() {
+    this.balance = 0;
     this.transactions = [];
-    this.bank = new Bank;
   }
 
   addTransaction(deposit, withdrawal) {
-    if (deposit != 0) {
-      this.transactions.unshift(this.bank.deposit(deposit));
-    } else if (withdrawal != 0) {
-      this.transactions.unshift(this.bank.withdraw(withdrawal));
-    } else {
-      return ('No deposit or withdrawal')
-    }
+      this.balance += deposit;
+      this.balance -= withdrawal;
+      this.transactions.unshift({date: new Date().toLocaleDateString(), deposit: deposit, withdrawal: withdrawal, balance: this.balance})
   }
 
   getTransactions() {

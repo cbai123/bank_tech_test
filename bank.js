@@ -1,16 +1,23 @@
+const BankFormatter = require("./bank_formatter");
+const BankTransactions = require("./bank_transactions");
+
+
 class Bank {
   constructor() {
-    this.balance = 0;
+    this.bankFormatter = new BankFormatter;
+    this.bankTransactions = new BankTransactions;
   }
 
   deposit(value) {
-    this.balance += value;
-    return {date: new Date().toLocaleDateString(), deposit: value, withdrawal: "", balance: this.balance}
+    this.bankTransactions.addTransaction(value, 0);
   }
 
   withdraw(value) {
-    this.balance -= value;
-    return {date: new Date().toLocaleDateString(), deposit: "", withdrawal: value, balance: this.balance}
+    this.bankTransactions.addTransaction(0, value);
+  }
+
+  viewStatement() {
+    this.bankFormatter(this.bankTransactions.getTransactions())
   }
 }
 
