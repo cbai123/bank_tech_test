@@ -8,15 +8,13 @@ describe('Bank class', () =>{
   })
 
   it('can take a deposit and return the correct balance', () =>{
-    // const bank = new Bank;
     bank.deposit(100);
     expect(bank.returnBalance()).toBe(100);
   });
 
   it('can take a withdrawal and return the correct balance', () => {
-    // const bank = new Bank;
-    bank.withdraw(100);
-    expect(bank.returnBalance()).toBe(-100);
+    bank.withdraw(200);
+    expect(bank.returnBalance()).toBe(-200);
   });
 
   it('can take multiple deposits and withdrawals and return the correct balance', () => {
