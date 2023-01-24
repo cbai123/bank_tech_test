@@ -5,12 +5,11 @@ class BankTransactions {
   }
 
   addTransaction (deposit, withdrawal) {
-    this.balance += deposit
-    this.balance -= withdrawal
-
     if (deposit !== '') {
+      this.balance += deposit
       deposit = deposit.toFixed(2)
     } else {
+      this.balance -= withdrawal
       withdrawal = withdrawal.toFixed(2)
     }
 
