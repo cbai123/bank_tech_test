@@ -5,21 +5,21 @@ describe('BankTransactions class', () => {
     .useFakeTimers()
     .setSystemTime(new Date('Sun Jan 22 2023 16:52:20 GMT+0000 (Greenwich Mean Time)'))
 
-  it('takes input of date and deposit and returns array with single object', () => {
+  it('takes deposit input and returns array with single object', () => {
     const bankTransactions = new BankTransactions()
     bankTransactions.addTransaction(200, '')
 
     expect(bankTransactions.getTransactions()).toEqual([{ date: '22/01/2023', deposit: '200.00', withdrawal: '', balance: '200.00' }])
   })
 
-  it('takes input of date and withdrawal and returns array with single object', () => {
+  it('takes withdrawal input and returns array with single object', () => {
     const bankTransactions = new BankTransactions()
     bankTransactions.addTransaction('', 300)
 
     expect(bankTransactions.getTransactions()).toEqual([{ date: '22/01/2023', deposit: '', withdrawal: '300.00', balance: '-300.00' }])
   })
 
-  it('takes multiple inputs and returns array with multiple Transactions', () => {
+  it('takes multiple inputs and returns array with multiple Transactions in the correct order', () => {
     const bankTransactions = new BankTransactions()
     bankTransactions.addTransaction(400, '')
     bankTransactions.addTransaction(300, '')

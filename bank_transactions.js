@@ -13,7 +13,12 @@ class BankTransactions {
       withdrawal = withdrawal.toFixed(2)
     }
 
-    this.transactions.unshift({ date: new Date().toLocaleDateString(), deposit, withdrawal, balance: this.balance.toFixed(2) })
+    this.transactions.unshift({
+      date: new Date().toLocaleDateString(),
+      deposit,
+      withdrawal,
+      balance: this.balance.toFixed(2)
+    })
   }
 
   getTransactions () {
