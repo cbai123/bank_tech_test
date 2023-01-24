@@ -1,7 +1,6 @@
-# Read Me
 # Banking app to record deposits and withdrawals and view them with latest first
 
-## Install:
+## Install:
 Clone this repository by running:
 ```bash
 git clone https://github.com/cbai123/bank_tech_test.git
