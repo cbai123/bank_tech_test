@@ -23,8 +23,8 @@ describe('BankTransactions class', () => {
     const bankTransactions = new BankTransactions()
     bankTransactions.addTransaction(400, '')
     bankTransactions.addTransaction(300, '')
-    bankTransactions.addTransaction('', 100)
+    bankTransactions.addTransaction('', 100.50)
 
-    expect(bankTransactions.getTransactions()).toEqual([{ date: '22/01/2023', deposit: '400.00', withdrawal: '', balance: '400.00' }, { date: '22/01/2023', deposit: '300.00', withdrawal: '', balance: '700.00' }, { date: '22/01/2023', deposit: '', withdrawal: '100.00', balance: '600.00' }].reverse())
+    expect(bankTransactions.getTransactions()).toEqual([{ date: '22/01/2023', deposit: '400.00', withdrawal: '', balance: '400.00' }, { date: '22/01/2023', deposit: '300.00', withdrawal: '', balance: '700.00' }, { date: '22/01/2023', deposit: '', withdrawal: '100.50', balance: '599.50' }].reverse())
   })
 })
