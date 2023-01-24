@@ -10,7 +10,7 @@ class BankTransactions {
 
     if (deposit !== '') {
       deposit = deposit.toFixed(2)
-    } else if (withdrawal !== '') {
+    } else {
       withdrawal = withdrawal.toFixed(2)
     }
 
