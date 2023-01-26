@@ -1,4 +1,4 @@
-const BankTransactions = require('./bank_transactions')
+const BankTransactions = require('./transactionHandler')
 
 describe('BankTransactions class', () => {
   jest

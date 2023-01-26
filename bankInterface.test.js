@@ -1,6 +1,6 @@
-const Bank = require('./bank')
+const BankInterface = require('./bankInterface')
 
-describe('Bank class', () => {
+describe('BankInterface class', () => {
   jest
     .useFakeTimers()
     .setSystemTime(new Date('Sun Jan 22 2023 16:52:20 GMT+0000 (Greenwich Mean Time)'))
@@ -15,10 +15,10 @@ describe('Bank class', () => {
   })
 
   it('accepts a deposit and gives the correct statement', () => {
-    const bank = new Bank()
+    const bankInterface = new BankInterface()
 
-    bank.deposit(100)
-    bank.viewStatement()
+    bankInterface.deposit(100)
+    bankInterface.viewStatement()
 
     expect(logSpy).toHaveBeenCalled()
     expect(logSpy).toHaveBeenCalledTimes(2)
@@ -27,10 +27,10 @@ describe('Bank class', () => {
   })
 
   it('accepts a withdrawal and gives the correct statement', () => {
-    const bank = new Bank()
+    const bankInterface = new BankInterface()
 
-    bank.withdraw(100)
-    bank.viewStatement()
+    bankInterface.withdraw(100)
+    bankInterface.viewStatement()
 
     expect(logSpy).toHaveBeenCalled()
     expect(logSpy).toHaveBeenCalledTimes(2)
@@ -39,15 +39,15 @@ describe('Bank class', () => {
   })
 
   it('accepts multiple deposits and withdrawals and gives the correct statement', () => {
-    const bank = new Bank()
+    const bankInterface = new BankInterface()
 
-    bank.deposit(100)
-    bank.deposit(200)
-    bank.withdraw(150)
-    bank.deposit(1000.50)
-    bank.withdraw(500)
-    bank.withdraw(350)
-    bank.viewStatement()
+    bankInterface.deposit(100)
+    bankInterface.deposit(200)
+    bankInterface.withdraw(150)
+    bankInterface.deposit(1000.50)
+    bankInterface.withdraw(500)
+    bankInterface.withdraw(350)
+    bankInterface.viewStatement()
 
     expect(logSpy).toHaveBeenCalled()
     expect(logSpy).toHaveBeenCalledTimes(7)

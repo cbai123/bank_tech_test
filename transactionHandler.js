@@ -1,4 +1,4 @@
-class BankTransactions {
+class TransactionHandler {
   constructor () {
     this.balance = 0.00
     this.transactions = []
@@ -26,4 +26,4 @@ class BankTransactions {
   }
 }
 
-module.exports = BankTransactions
+module.exports = TransactionHandler
